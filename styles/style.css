@@ -1,0 +1,160 @@
+body {
+  /* background-image: url("../static/bg.jpg"); */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: aliceblue;
+  background-color: #7aa6ff;
+  text-align: center;
+  margin: 0px;
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h2, h3, h4, h5 {
+    margin: 0px;
+}
+
+.leftSide {
+    width: 40vw;
+    height: 100vh;
+    float: left;
+}
+
+.rightSide {
+    width: 59.5vw;
+    height: 100vh;
+    float: right;
+}
+
+.nowServing {
+    width: 100%;
+    height: 10vh;
+    font-size: 4rem;
+    background-color: #124190;
+    margin: 0px;
+    padding-top: 1vh;
+    line-height: 6rem;
+}
+
+.time {
+    text-align: right;
+    padding-right: 2.5vw;
+    line-height: 6rem;
+}
+
+.rightBox {
+    width: 100%;
+    height: 10vh;
+    font-size: 3rem;
+}
+
+.numberBox {
+    height: 45vh;
+    width: 100%;
+    font-size: 5rem;
+    background-color: #0f80ca;
+}
+
+.smallNumberBox {
+    height: 45vh;
+    width: 100%;
+    font-size: 5rem;
+    background-color: #4983f7;
+}
+
+.currentNumber {
+    border-radius: 0px 0px 15px 0px;    
+}
+
+.nextNumberText {
+    margin-top: 0.5vw;
+    border-radius: 0px 15px 0px 0px;
+    width: 100%;
+    height: 10vh;
+    font-size: 4rem;
+    background-color: #124190;
+    text-align: center;
+    padding: 0px;
+    line-height: 7rem;
+}
+
+.timeBox {
+    width: 100%;
+    height: 10vh;
+    font-size: 4rem;
+    background-color: #041d5b;
+    margin: 0px;
+    padding-top: 1vh;
+    margin-bottom: 0.5vw;
+    border-radius: 0px 0px 0px 15px;
+}
+
+.previousCallsBox {
+    width: 100%;
+    height: 10vh;
+    font-size: 3rem;
+    background-color: #041d5b;
+    margin: 0px;
+    padding-top: 1vh;
+    border-radius: 15px 0px 0px 0px;
+    line-height: 6rem;
+}
+
+.previousNumber {
+    width: 45.5%;
+    margin: 2.5% 0px 7.5% 2.5%;
+    height: 25%;
+    float: left;
+    border: 8px solid #041d5b;
+    border-radius: 15px;
+}
+
+.previousBox {
+    background-color: #124190;
+    width: 100%;
+    height: 100%;
+}
+
+.kioskNumber {
+    font-size: 6rem;
+    background-color: #7aa6ff;
+    border: 7px solid crimson;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 50%;
+    width: 6vw;
+    height: 6vw;
+    top: -2.5vw;
+    left: 0.5vw;
+    position: relative;
+    line-height: 8rem;
+    float:right;
+}
+
+.mainNumber {
+    top: -11vh;
+    left: -5vw;
+}
+
+.callNumber {
+    height: 14vw;
+    line-height: 18vw;
+    text-align: center;
+    width: 100%;
+    font-size: 10rem;
+}
+
+.nextCall {
+    line-height: 20vw;
+}
+
+.mainCounterText {
+    width: 80%;
+}
+
+.counterText {
+    position: relative;
+    top: 1.5vh;
+}
