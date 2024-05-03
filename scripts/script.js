@@ -4,6 +4,8 @@ window.onload = function() {
     setInterval(updateClock, 10000);
     getNums();
     setInterval(getNums, 10000);
+    getNextNums();
+    setInterval(getNextNums, 10000);
 }
 
 //  Update the clock every 10 seconds
@@ -17,21 +19,28 @@ function updateClock() {
 }
 
 function getNums() {
-    fetch("http://localhost:8090/signage/nextNums").then(function(response) {
+    fetch("http://localhost:8090/signage/getNums").then(function(response) {
         return response.json();
       })
       .then(function(data) {
-        console.log(data);
-
+        fetch("http://localhost:8090/signage/nextNum").then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+            document.getElementById("nextNumber").innerHTML = data["num"];
+          })
+          .catch(function(err) {
+            console.log('Fetch Error :-S', err);
+          });
         for (const key in data) {
             document.getElementById("num" + key).innerHTML = data[key][0];
             document.getElementById("kiosk" + key).innerHTML = data[key][1];
         }
-
-
       })
       .catch(function(err) {
         console.log('Fetch Error :-S', err);
       });
-      
+}
+
+function getNextNums() {
 }
