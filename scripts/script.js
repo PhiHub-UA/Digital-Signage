@@ -10,6 +10,7 @@ window.onload = function() {
 
 //  Update the clock every 10 seconds
 function updateClock() {
+  
   var date = new Date();
 
   var hour = (date.getHours() < 10 ? '0' : '') + date.getHours();
