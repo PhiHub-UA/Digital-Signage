@@ -10,10 +10,10 @@ window.onload = function() {
 
 //  Update the clock every 10 seconds
 function updateClock() {
-  var date = new Date();
+  let date = new Date();
 
-  var hour = (date.getHours() < 10 ? '0' : '') + date.getHours();
-  var minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes()
+  let hour = (date.getHours() < 10 ? '0' : '') + date.getHours();
+  let minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes()
 
   document.getElementById("clock").innerHTML = hour + ":" + minutes;
 }
@@ -48,7 +48,4 @@ function getNums() {
     .catch(function(err) {
       console.log('Fetch Error :-S', err);
     });
-}
-
-function getNextNums() {
 }
