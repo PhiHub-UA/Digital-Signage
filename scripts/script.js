@@ -19,31 +19,22 @@ function updateClock() {
 }
 
 function getNums() {
-  fetch("http://localhost:8080/signage", {method: "POST"}).then(function(response) {
-      return response.json();
+  fetch("http://localhost:8080/signage").then(function(response) {
+    return response.json();
     })
     .then(function(data) {
       console.log(data);
-      fetch("http://localhost:8080/signage").then(function(response) {
-        return response.json();
-        })
-        .then(function(data) {
-          console.log(data);
 
-          for (const key in data) {
-            console.log("setting for key " + key + " and data " + data[key])
-            if(key == "nextnum") {
-              document.getElementById("nextNumber").innerHTML = data[key];
-            }
-            else {
-              document.getElementById("num" + key).innerHTML = data[key][0];
-              document.getElementById("kiosk" + key).innerHTML = data[key][1];
-            }
-          }
-        })
-        .catch(function(err) {
-          console.log('Fetch Error :-S', err);
-        });
+      for (const key in data) {
+        console.log("setting for key " + key + " and data " + data[key])
+        if(key == "nextnum") {
+          document.getElementById("nextNumber").innerHTML = data[key];
+        }
+        else {
+          document.getElementById("num" + key).innerHTML = data[key][0];
+          document.getElementById("kiosk" + key).innerHTML = data[key][1];
+        }
+      }
     })
     .catch(function(err) {
       console.log('Fetch Error :-S', err);
