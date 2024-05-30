@@ -17,7 +17,7 @@ function updateClock() {
 }
 
 function getNums() {
-      fetch("http://localhost:8080/signage").then(function(response) {
+      fetch("http://phihub-backend:8080/signage").then(function(response) {
         return response.json();
         })
         .then(function(data) {
