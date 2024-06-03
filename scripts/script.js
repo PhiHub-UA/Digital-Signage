@@ -17,7 +17,7 @@ function updateClock() {
 }
 
 function getNums() {
-      fetch("http://deti-tqs-18.ua.pt:8080/signage").then(function(response) {
+      fetch("http://localhost:8080/signage").then(function(response) {
         return response.json();
         })
         .then(function(data) {
